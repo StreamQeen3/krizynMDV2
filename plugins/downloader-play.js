@@ -1,36 +1,45 @@
-import { youtubeSearch } from '@bochilteam/scraper'
+const { servers, yta, ytv } = require('../lib/y2mate')
+let yts = require('yt-search')
+let fetch = require('node-fetch')
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `Use example ${usedPrefix}${command} Minecraft`
-  let vid = (await youtubeSearch(text)).video[0]
-  if (!vid) throw 'Video/Audio Not found'
-  let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
-  const url = 'https://www.youtube.com/watch?v=' + videoId
-  await conn.sendHydrated(m.chat, `
- ⫺╤╤╧ *𝘔𝘪𝘴𝘴 𝘘𝘦𝘦𝘯 𝘞𝘈 𝘣𝘰𝘵* ╧╤╤⫹
-
-🎭➠ *Title:* ${title}
-
-🎭➠ *Url:* ${url}
-
-🎭➠ *Description:* ${description}
-
-🎭➠ *Published:* ${publishedTime}
-
-🎭➠ *Duration:* ${durationH}
-
-🎭➠ *Views:* ${viewH}
-
-⫺ ╧╧╧╧╧╧ ⋞ 〈⫹⫺〉 ⋟ ╧╧╧╧╧╧ ⫹
-  `.trim(), author, thumbnail, '', '', null, null, [
-    ['⦀𝙰𝚄𝙳𝙸𝙾➟𝚃𝚈𝙿𝙴➟𝙳𝙾𝙲𝚄𝙼𝙴𝙽𝚃⦀', `${usedPrefix}yta ${url} yes`],
-    ['⦀𝚅𝙸𝙳𝙴𝙾➠𝚀𝚄𝙰𝙻𝙸𝚃𝚈➟360𝙿⦀', `${usedPrefix}ytv ${url} yes`]
-  ], m, { asLocation: 1 })
+  if (!text) throw `Harap masukkan query!\n\nContoh: ${usedPrefix + command} yanagi nagi one's hope`
+  let chat = global.db.data.chats[m.chat]
+  let results = await yts(text)
+  let vid = results.all.find(video => video.seconds < 3600)
+  if (!vid) throw 'Konten Tidak ditemukan'
+  let isVideo = /2$/.test(command)
+  let yt = false
+  let yt2 = false
+  let usedServer = servers[0]
+  for (let i in servers) {
+    let server = servers[i]
+    try {
+      yt = await yta(vid.url, server)
+      yt2 = await ytv(vid.url, server)
+      usedServer = server
+      break
+    } catch (e) {
+      m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
+    }
+  }
+  if (yt === false) throw 'semua server gagal'
+  if (yt2 === false) throw 'semua server gagal'
+  let { dl_link, thumb, title, filesize, filesizeF } = yt
+  await conn.send2ButtonLoc(m.chat, await (await fetch(thumb)).buffer(), `
+*PLAY YOUTUBE*
+├●───────────────┤
+◁ㅤㅤㅤㅤ ㅤ❚❚ㅤㅤㅤㅤㅤ ▷ 
+📃 *Judul:* ${title}
+💽 *Ukuran File Audio:* ${filesizeF}
+🎥 *Ukuran File Video:* ${yt2.filesizeF}
+📠 *Server y2mate:* ${usedServer}
+╰─────────❉ 
+`.trim(), watermark, '🎶Audio', `.yta ${vid.url}`, '🎥Video', `.yt ${vid.url}`)
 }
-handler.help = ['song', 'video','play'].map(v => v + '')
+handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
-handler.command = /^(song|video|play)$/i
+handler.command = /^(p|play)$/i
 
 handler.exp = 0
-handler.limit = false
 
-export default handler
+module.exports = handler
