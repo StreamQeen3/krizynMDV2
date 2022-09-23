@@ -11,7 +11,7 @@ global.mods = ['94758663348']
 global.prems = ['94758663348'] 
 
 //=============『 Info Owner 』============== //
-global.nameowner = 'ArullOfc ✰'
+global.nameowner = '💆‍♂️𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙_𝚋𝚘𝚝 #24/7💆‍♂️'
 global.numberowner = '94758663348'
 global.instagram = 'https://instagram.com/'
 global.github = 'https://github.com/'
@@ -20,24 +20,24 @@ global.pulsa = '94758663348'
 global.gopay = ''
 
 //=============『 Info Bot 』=================//
-global.namebot = 'ArullBotzMD'
+global.namebot = '*𝘔𝘪𝘴𝘴 𝘘𝘦𝘦𝘯 𝘞𝘈 𝘣𝘰𝘵*'
 global.gc = 'https://chat.whatsapp.com/'
 global.web = 'https://chat.whatsapp.com/' //ubah jadi website lu, bisa link ig, link github, link yt, klo link gc ntr beda tampilan lagi. 
 global.webm = 'https://github.com/'
 global.price1 = '𝐍𝐈𝐇 𝐁𝐀𝐍𝐆 𝐋𝐈𝐒𝐓 𝐒𝐄𝐖𝐀𝐍𝐘𝐀\n\n》1 MINGGU Rp 5.000\nMAKSIMAL 1 GRUP\n》1 BULAN  Rp 10.000\nMAKSIMAL 1 GRUP \n》 Rp 20.000\nMAKSIMAL 1 GRUP + PREMIUM\n》PERMANEN Rp 30.000\nMAKSIMAL 3 GRUP\n》4 BULAN  Rp 25.000\nMAKSIMAL 2 GRUP + PREMIUM\n\nMAU NAMBAH GRUP LAGI \nPERMANEN Rp 25.000\nMAKSIMAL 2 GRUP'
 
 //=======『 Tampilan Dan Lainnya 』============//
-global.fotonya1 = 'https://p4.wallpaperbetter.com/wallpaper/554/763/696/anime-bare-blue-detached-wallpaper-preview.jpg' //ganti jadi foto bot mu
-global.fotonya2 = 'https://p4.wallpaperbetter.com/wallpaper/554/763/696/anime-bare-blue-detached-wallpaper-preview.jpg' //ini juga ganti 
+global.fotonya1 = 'https://i.ibb.co/DRfj2J9/avatar-contact.jpg' //ganti jadi foto bot mu
+global.fotonya2 = 'https://i.ibb.co/DRfj2J9/avatar-contact.jpg' //ini juga ganti 
 global.lolkey = 'Papah-Chan' //biar mudah ngegantinya semisal apikeynya expired:v
 global.zenzkey = 'BagasPrdn' //ganti jadi apikey lu kalau expired
-global.wm = '↻ArullBotz𝙼𝙳'
-global.watermark = wm
-global.wm2 = 'ᯤ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 𝙱𝚈 ArullOfc ×፝֟͜×'
-global.wm3 = 'ᯤ Arull𝙾𝙵𝙲'
+global.wm = '💆‍♂️𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙_𝚋𝚘𝚝 #24/7💆‍♂️'
+global.watermark = 💆‍♂️𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙_𝚋𝚘𝚝 #24/7💆‍♂️
+global.wm2 = '💆‍♂️𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙_𝚋𝚘𝚝 #24/7💆‍♂️'
+global.wm3 = '💆‍♂️𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙_𝚋𝚘𝚝 #24/7💆‍♂️'
 global.htki = '––––––『' 
 global.htka = '』––––––'
-global.media = 'https://p4.wallpaperbetter.com/wallpaper/554/763/696/anime-bare-blue-detached-wallpaper-preview.jpg'
+global.media = 'https://i.ibb.co/DRfj2J9/avatar-contact.jpg'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=smurfs-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.wait = '⏳Tunggu Sedang Proses...'
 global.eror = '_*🚨 Server Bot Sedang Error*_'
@@ -45,7 +45,7 @@ global.benar = 'Benar ✅\n'
 global.salah = 'Salah ❌\n'
 global.stiker_wait = '⏳ Stiker sedang Proses'
 global.packname = 'Sticker By'
-global.author = '@ArullOfc✵'
+global.author = '𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙_𝚋𝚘𝚝 #24/7'
 
 //=============『 Apikey 』================== //
 global.APIs = { // API Prefix
