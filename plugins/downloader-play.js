@@ -29,16 +29,19 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 *PLAY YOUTUBE*
 ├●───────────────┤
 ◁ㅤㅤㅤㅤ ㅤ❚❚ㅤㅤㅤㅤㅤ ▷ 
-📃 *Judul:* ${title}
+📃 *Title:* ${title}
+
 💽 *Ukuran File Audio:* ${filesizeF}
+
 🎥 *Ukuran File Video:* ${yt2.filesizeF}
+
 📠 *Server y2mate:* ${usedServer}
 ╰─────────❉ 
 `.trim(), watermark, '🎶Audio', `.yta ${vid.url}`, '🎥Video', `.yt ${vid.url}`)
 }
-handler.help = ['play'].map(v => v + ' <pencarian>')
+handler.help = ['song', 'video','play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
-handler.command = /^(p|play)$/i
+handler.command = /^(song|video|play)$/i
 
 handler.exp = 0
 
