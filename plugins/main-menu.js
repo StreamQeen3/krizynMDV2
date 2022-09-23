@@ -210,7 +210,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 //━━━━━━━━[ TIMER ]━━━━━━━━//
     let d = new Date(new Date + 3600000)
     let locale = 'id'
-    let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+    let wib = moment.tz('Asia/Colombo').format('HH:mm:ss')
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let date = d.toLocaleDateString(locale, {
@@ -239,7 +239,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     }
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
-    let waktuwib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+    let waktuwib = moment.tz('Asia/Colombo').format('HH:mm:ss')
 
 //━━━━━━━━[ SETTING HELP ]━━━━━━━━//
 let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
@@ -604,7 +604,7 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 function ucapan() {
-  const time = moment.tz('Asia/Jakarta').format('HH')
+  const time = moment.tz('Asia/Colombo').format('HH')
   res = "tidur gih sana"
   if (time >= 5) {
     res = "Selamat pagi🌅 kak"
